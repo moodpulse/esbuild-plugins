@@ -121,31 +121,5 @@ export function builtinsPolyfills() {
         require.resolve('rollup-plugin-node-polyfills/polyfills/domain'),
     )
 
-    // not shimmed
-    libs.set('dns', EMPTY_PATH)
-    libs.set('dgram', EMPTY_PATH)
-    libs.set('child_process', EMPTY_PATH)
-    libs.set('cluster', EMPTY_PATH)
-    libs.set('module', EMPTY_PATH)
-    libs.set('net', EMPTY_PATH)
-    libs.set('readline', EMPTY_PATH)
-    libs.set('repl', EMPTY_PATH)
-    libs.set('tls', EMPTY_PATH)
-    libs.set('fs', EMPTY_PATH)
-    libs.set('crypto', EMPTY_PATH)
-
-    // libs.set(
-    //     'fs',
-    //     require.resolve('rollup-plugin-node-polyfills/polyfills/browserify-fs'),
-    // )
-
-    // TODO enable crypto and fs https://github.com/ionic-team/rollup-plugin-node-polyfills/issues/20
-    // libs.set(
-    //     'crypto',
-    //     require.resolve(
-    //         'rollup-plugin-node-polyfills/polyfills/crypto-browserify',
-    //     ),
-    // )
-
     return libs
 }
